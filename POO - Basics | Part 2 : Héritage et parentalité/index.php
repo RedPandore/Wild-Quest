@@ -9,54 +9,15 @@
 <body>
     <?php
 
-require_once 'Bicycle.php';
-
-
-$bicycle = new Bicycle('blue', 1);
-$bicycle->setCurrentSpeed(20);
-echo $bicycle->forward();
-
-var_dump($bicycle);
-
-// CAR
-
 require_once 'Car.php';
 
 $car = new Car('green', 4, 'electric');
 
-echo $car->forward();
+echo $car->start();
 
-var_dump($car);
 
-// Truck
 
-require_once 'Truck.php';
 
-$iveco = new Truck('White', '3','Fuel','50');
-
-var_dump($iveco);
-
-$iveco->setactualCapacity(40); 
-
-echo $iveco->forward().PHP_EOL;?> </br> 
-<?php
-
-echo $iveco->brake().PHP_EOL;?> </br> 
-<?php
-
-echo $iveco->emptyorfull().PHP_EOL;?> </br> 
-<?php
-echo $iveco->getactualCapacity();?> </br> 
-<?php
-$iveco->setactualCapacity(45);
-echo $iveco->emptyorfull().PHP_EOL;?> </br> 
-<?php
-echo $iveco->getactualCapacity();?> </br> 
-<?php
-$iveco->setactualCapacity(50);
-echo $iveco->emptyorfull().PHP_EOL;?> </br> 
-<?php
-echo $iveco->getactualCapacity();
     ?>
 </body>
 </html>
